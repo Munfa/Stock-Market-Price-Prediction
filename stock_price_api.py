@@ -9,13 +9,13 @@ from sklearn.metrics import root_mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
 ##### 
-#    Used my API key to get the data, extracted the JSON file
+#    Use your API key to get the data and extract the JSON file
 #    Run this section of the code separately ('creating the JSON file from the API')
 #    Comment the code after the file is created   
 #    Save the CSV file later
 #####
 
-# url = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=IBM&apikey=40DM9ER64D42F2RN'
+# url = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=IBM&apikey=demo'
 # r = requests.get(url)
 # if r.status_code == 200:
 #     data = r.json()
@@ -35,7 +35,7 @@ if 'Weekly Adjusted Time Series' in data:
 df = pd.DataFrame.from_dict(stock_data, orient='index', dtype=float) #converting the dates to index from the dictionary keys
 
 df.columns = ['Open', 'High', 'Low', 'Close', 'Adjusted Close', 'Volume', 'Dividend Amount']
-df.index = pd.to_datetime(df.index) # convertin the date into pandas datetime object
+df.index = pd.to_datetime(df.index) # converting the date into pandas datetime object
 df = df.astype(float)
 df.sort_index(inplace=True) # sorting from the old to new data
 
