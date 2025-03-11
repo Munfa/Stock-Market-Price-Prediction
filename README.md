@@ -69,7 +69,9 @@ The evaluation metrics for this model:
   <li>Standard Deviation: 36.101</li>
   <li>R<sup>2</sup> score: 0.943</li>
 </ul>
-This indicates the model's good performance and accuracy in prediction
+This indicates the model's good performance and accuracy in prediction<br>
+<br>
+<img src="stock_prediction.png" width='65%' >
 
 <h3>Future Improvements</h3>
 <ul>
